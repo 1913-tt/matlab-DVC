@@ -1,0 +1,33 @@
+function [outimg,bitrate,SIpsnr]=DVCcodecrefineNew(im1,im2,im3,frame,iQ)
+
+addpath('quan_and_bitplane');
+addpath('LDPCA');
+ladderFile = '396_regDeg3.lad';
+
+order1=[1,1;1,2;2,1;2,2];
+
+
+SI=phaseInterN(im1,im2,im3,18);
+
+SIpsnr=psnr(im3,SI);
+% fprintf("≥ı º±ﬂ–≈œ¢PSNR£∫%f\n",SIpsnr);
+SIblocks=deBlock(SI,2);
+im3blocks=deBlock(im3,2);
+for n=1:4
+    SI_4(:,:,n)=uint8(reshape(SIblocks(order1(n,1),order1(n,2),:),144/2,176/2));
+    im3_4(:,:,n)=uint8(reshape(im3blocks(order1(n,1),order1(n,2),:),144/2,176/2));
+end
+for n=1:4
+    [out_4(:,:,n),bitrate_4(n),~]=DVCcodec396(SI_4(:,:,n),im3_4(:,:,n),frame,iQ);
+    temp=imreout_4(:,:,n);
+%     figure;imshow(out_4(:,:,n));
+end
+for n=1:4
+    
+    outblocks(order1(n,1),order1(n,2),:)=reshape(out_4(:,:,n),1,[]);
+end
+bitrate=sum(bitrate_4);
+outimg=reBlock(outblocks,[size(im1,1),size(im1,2)]);
+
+
+end

@@ -1,0 +1,97 @@
+Setting Default Parameters...
+Parsing Configfile encoder_intra_main.cfg..............................................................................................................................................................................................................................................................................................
+Parsing command line string 'InputFile = ../../bin/foreman_qcif_15hz.yuv'.
+Parsing command line string 'ReconFile = ../../bin/rec.yuv'.
+Parsing command line string 'FramesToBeEncoded = 25'.
+Parsing command line string 'QPISlice = 25'.
+Parsing command line string 'FrameSkip = 1'.
+Parsing command line string 'SourceWidth = 176'.
+Parsing command line string 'SourceHeight = 144'.
+
+------------------------------- JM 18.5 (FRExt) -------------------------------
+ Input YUV file                    : ../../bin/foreman_qcif_15hz.yuv 
+ Output H.264 bitstream            : test.264 
+ Output YUV file                   : ../../bin/rec.yuv 
+ YUV Format                        : YUV 4:2:0 
+ Frames to be encoded              : 25
+ Freq. for encoded bitstream       : 15.00
+ PicInterlace / MbInterlace        : 0/0
+ Transform8x8Mode                  : 0
+ ME Metric for Refinement Level 0  : SAD
+ ME Metric for Refinement Level 1  : Hadamard SAD
+ ME Metric for Refinement Level 2  : Hadamard SAD
+ Mode Decision Metric              : Hadamard SAD
+ Motion Estimation for components  : Y
+ Image format                      : 176x144 (176x144)
+ Error robustness                  : Off
+ Search range                      : 32
+ Total number of references        : 5
+ References for P slices           : 5
+ References for B slices (L0, L1)  : 5, 1
+ Sequence type                     : IIII (QP: I 25) 
+ Entropy coding method             : CABAC
+ Profile/Level IDC                 : (77,40)
+ Motion Estimation Scheme          : Fast Full Search
+ Search range restrictions         : none
+ RD-optimized mode decision        : used
+ Data Partitioning Mode            : 1 partition 
+ Output File Format                : H.264/AVC Annex B Byte Stream Format 
+-------------------------------------------------------------------------------
+Frame     Bit/pic    QP   SnrY    SnrU    SnrV    Time(ms) MET(ms) Frm/Fld Ref  
+-------------------------------------------------------------------------------
+00000(NVB)     168 
+00000(IDR)   28496   25  39.668  42.677  44.385        45       0    FRM    3
+00002( I )   29208   25  39.752  42.610  44.576        41       0    FRM    2
+00004( I )   29928   25  39.863  42.711  44.433        56       0    FRM    2
+00006( I )   31000   25  39.791  42.388  44.480        42       0    FRM    2
+00008( I )   31176   25  39.584  42.407  44.491        41       0    FRM    2
+00010( I )   31168   25  39.605  42.457  44.839        42       0    FRM    2
+00012( I )   31368   25  39.579  42.358  44.731        34       0    FRM    2
+00014( I )   31624   25  39.580  42.532  44.504        34       0    FRM    2
+00016( I )   31464   25  39.570  42.758  44.521        35       0    FRM    2
+00018( I )   31216   25  39.689  42.424  44.466        34       0    FRM    2
+00020( I )   30392   25  39.697  42.588  44.633        33       0    FRM    2
+00022( I )   30280   25  39.864  42.828  44.198        35       0    FRM    2
+00024( I )   30704   25  39.846  42.356  44.443        41       0    FRM    2
+00026( I )   31808   25  39.802  42.532  44.135        38       0    FRM    2
+00028( I )   33392   25  39.540  42.133  44.196        35       0    FRM    2
+00030( I )   32608   25  39.606  42.475  44.551        37       0    FRM    2
+00032( I )   31440   25  39.706  42.477  44.192        35       0    FRM    2
+00034( I )   31032   25  39.841  42.442  44.116        34       0    FRM    2
+00036( I )   29328   25  40.127  42.411  44.376        33       0    FRM    2
+00038( I )   30112   25  40.114  42.605  44.020        33       0    FRM    2
+00040( I )   31568   25  39.821  42.384  43.571        35       0    FRM    2
+00042( I )   33656   25  39.577  42.131  43.717        35       0    FRM    2
+00044( I )   32528   25  39.641  42.174  43.957        34       0    FRM    2
+00046( I )   30840   25  39.895  42.421  44.042        33       0    FRM    2
+00048( I )   31400   25  39.895  42.664  43.958        34       0    FRM    2
+-------------------------------------------------------------------------------
+ Total Frames:  25 
+ LeakyBucketRate File does not exist. Using rate calculated from avg. rate 
+ Number Leaky Buckets: 8 
+     Rmin     Bmin     Fmin 
+   466635    37513    31120 
+   583290    33656    28496 
+   699945    33656    28496 
+   816600    33656    28496 
+   933255    33656    28496 
+  1049910    33656    28496 
+  1166565    33656    28496 
+  1283220    33656    28496 
+------------------ Average data all frames  -----------------------------------
+
+ Total encoding time for the seq.  :   0.942 sec (26.54 fps)
+ Total ME time for sequence        :   0.000 sec 
+
+ Y { PSNR (dB), cSNR (dB), MSE }   : {  39.746,  39.743,   6.89842 }
+ U { PSNR (dB), cSNR (dB), MSE }   : {  42.478,  42.474,   3.67844 }
+ V { PSNR (dB), cSNR (dB), MSE }   : {  44.301,  44.290,   2.42124 }
+
+ Total bits                        : 777904 (I 777736, P 0, NVB 168) 
+ Bit rate (kbit/s)  @ 15.00 Hz     : 466.74
+ Bits to avoid Startcode Emulation : 113 
+ Bits for parameter sets           : 168 
+ Bits for filler data              : 0 
+
+-------------------------------------------------------------------------------
+Exit JM 18 (FRExt) encoder ver 18.5 

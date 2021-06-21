@@ -1,0 +1,76 @@
+Setting Default Parameters...
+Parsing Configfile jm\\encoder_intra_main.cfg..............................................................................................................................................................................................................................................................................................
+Parsing command line string 'InputFile = "yuv//hall_qcif.yuv"'.
+Parsing command line string 'ReconFile = "keyF//hall_qcif_out.yuv"'.
+Parsing command line string 'FramesToBeEncoded = "3"'.
+Parsing command line string 'QPISlice = "24.yuv"'.
+Parsing command line string 'FrameSkip = "1.yuv"'.
+Parsing command line string 'SourceWidth = "176.yuv"'.
+Parsing command line string 'SourceHeight = "144.yuv"'.
+Parsing command line string 'Grayscale = "1.yuv"'.
+
+------------------------------- JM 19.0 (FRExt) -------------------------------
+ Input YUV file                    : yuv//hall_qcif.yuv 
+ Output H.264 bitstream            : test.264 
+ Output YUV file                   : keyF//hall_qcif_out.yuv 
+ YUV Format                        : YUV 4:2:0 
+ Frames to be encoded              : 3
+ Freq. for encoded bitstream       : 15.00
+ PicInterlace / MbInterlace        : 0/0
+ Transform8x8Mode                  : 0
+ ME Metric for Refinement Level 0  : SAD
+ ME Metric for Refinement Level 1  : Hadamard SAD
+ ME Metric for Refinement Level 2  : Hadamard SAD
+ Mode Decision Metric              : Hadamard SAD
+ Motion Estimation for components  : Y
+ Image format                      : 176x144 (176x144)
+ Error robustness                  : Off
+ Search range                      : 32
+ Total number of references        : 5
+ References for P slices           : 5
+ References for B slices (L0, L1)  : 5, 1
+ Sequence type                     : IIII (QP: I 24) 
+ Entropy coding method             : CABAC
+ Profile/Level IDC                 : (77,40)
+ Motion Estimation Scheme          : Fast Full Search
+ Search range restrictions         : none
+ RD-optimized mode decision        : used
+ Data Partitioning Mode            : 1 partition 
+ Output File Format                : H.264/AVC Annex B Byte Stream Format 
+-------------------------------------------------------------------------------
+Frame     Bit/pic    QP   SnrY    SnrU    SnrV    Time(ms) MET(ms) Frm/Fld Ref  
+-------------------------------------------------------------------------------
+00000(NVB)     168 
+00000(IDR)   26536   24  40.996  86.149  86.149       112       0    FRM    3
+00002( I )   26888   24  41.122  86.149  86.149       105       0    FRM    2
+00004( I )   26936   24  41.240  86.149  86.149       121       0    FRM    2
+-------------------------------------------------------------------------------
+ Total Frames:  3 
+ LeakyBucketRate File does not exist. Using rate calculated from avg. rate 
+ Number Leaky Buckets: 8 
+     Rmin     Bmin     Fmin 
+   401790    27038    26788 
+   502230    26936    26536 
+   602670    26936    26536 
+   703110    26936    26536 
+   803550    26936    26536 
+   903990    26936    26536 
+  1004430    26936    26536 
+  1104870    26936    26536 
+------------------ Average data all frames  -----------------------------------
+
+ Total encoding time for the seq.  :   0.339 sec (8.85 fps)
+ Total ME time for sequence        :   0.000 sec 
+
+ Y { PSNR (dB), cSNR (dB), MSE }   : {  41.119,  41.118,   5.02645 }
+ U { PSNR (dB), cSNR (dB), MSE }   : {  86.149,  86.149,   0.00000 }
+ V { PSNR (dB), cSNR (dB), MSE }   : {  86.149,  86.149,   0.00000 }
+
+ Total bits                        : 80528 (I 80360, P 0, NVB 168) 
+ Bit rate (kbit/s)  @ 15.00 Hz     : 402.64
+ Bits to avoid Startcode Emulation : 23 
+ Bits for parameter sets           : 168 
+ Bits for filler data              : 0 
+
+-------------------------------------------------------------------------------
+Exit JM 19 (FRExt) encoder ver 19.0 
